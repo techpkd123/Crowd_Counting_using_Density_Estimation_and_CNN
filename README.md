@@ -1,41 +1,27 @@
 # Crowd_Counting_using_Density_Estimation_and_CNN
+## Context
+The problem of object counting is a difficult problem in which you have an image and have to count all the certain objects on that image, this becomes intractable in the context of big data and internet of things when you have videos tracking and need to count the objects in every frame. This problem can be achieved by an automatic process like a machine learning algorithm that receives a image as input and gives the number of some object of interest in the image (discrete value). For that different approaches can be done, the typical and easier is consider the number of element in the image as a label and transform it to some classification problem, other transform to a regression problem and other ones use a fully convolutional architecture in where the final convolutional output can be consider the numbers of object in that region and then sum up.
 
-## What is Crowd-Counting?
-  Crowd counting is a technique to count the number of people present in the image. Counting the number of people in sparse crowd is way simpler than counting the count in dense areas where the amount of people is huge like sports stadium or any tomorrowland festival. So by this technique we can do it in few seconds.
 
-## Why we need Crowd-Counting?
-  By looking in the below image can we calculate the crowd count well yess but this is time consuming task right? This is where your deep learning skills kick in we just automate the process with the help of something known as Convolutional Neural Network or CNN. We will talk in lil depth about how we implement our model, trained and tested it.
-  
-  <img src="https://static.timesofisrael.com/www/uploads/2012/04/crowd-in-berlin.jpg" height = "350" width="900"/>
-  
+## Dataset
+The dataset is composed by RGB images of frames in a video (as inputs) and the object counting on every frame, this is the number of pedestrians (object) in the image. The images are 480x640 pixels at 3 channels of the same spot recorded by a webcam in a mall but it has different number of person on every frame, is a problem of crowd counting.
+
+![image](https://user-images.githubusercontent.com/49801313/119560829-0e878680-bdc2-11eb-8c57-deb43d5da22d.png)
  
-### Installation:
-  - Pytorch > 1.X
-  - Cuda > 10.X
-  - Scipy/Numpy/h5py
-  - Python 3.x
-### Steps to train the model:
-  - First install all the required libraries 
-  - Download the Shanghai Dataset and move the python files to the Dataset folder.
-  - Generate the ground truth and density map with GenerateGroundnTruth.py file
-    - Change the path in python script where you have downloaded your dataset.
-    - Shanghai dataset has two parts Part_A and Part_B.
-      - Shanghai Part_A dataset contains images that are overcrowded or more crowded
-      - Shanghai Part_B dataset contains images in which the crowd is scattered or sparsed.
-   - After generating the ground truth and density map you can see the following output of the images with the sum count.
-   - Now the train.py file to train the model on Part_A and you will get the output weights file with .tar extension save it at your current directory.
-   - Note Part_A will perform good on crowded images so for scattered crowd you have to train the Part_B dataset.
-   - Now predict any random or new image on the trained model.
- <img src="https://github.com/surajdakua/Crowd-Counting-Using-Pytorch/blob/master/Density_map1.png" height = "350" width="900"/>
-  
-## Density Map of the following image.
- <img src="https://github.com/surajdakua/Crowd-Counting-Using-Pytorch/blob/master/Desnity_Map50.png" height = "350" width="900"/>
 
-## Papers to make you understand the concept more clear.
-    - https://arxiv.org/pdf/1907.02724v1.pdf
-    - https://arxiv.org/pdf/1708.00199v2.pdf
-    - https://arxiv.org/pdf/1707.09605v2.pdf
-    - https://arxiv.org/pdf/1803.03095v1.pdf
+
+We give the images data as a binary file of NumPy (.npy format) that you can easily load with the numpy load function. If you want to load image by image we also give the JPG images in a folder.
+
+The labels/target are the number of person on the frame JPG image and there is one for each image. This are integer numbers of the counting, for example in the Image above there are 29 objects (people).
+
+![image](https://user-images.githubusercontent.com/49801313/119560850-1515fe00-bdc2-11eb-9b6b-26358b70edca.png)
+
+## Installation Instructions
+
+Make sure you have all the dependencies installed like:-
+### Tensorflow
+After that you can clone the repo and open the notebook to go through the implementatino.
+
 ## Reference and Motivation.
 https://www.analyticsvidhya.com/blog/2019/02/building-crowd-counting-model-python/
  
