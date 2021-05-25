@@ -30,7 +30,6 @@ The labels/target are the number of person on the frame JPG image and there is o
     
    Then you are good to go and can explore the project(i.e. notebook)
     
-After that you can clone the repo and open the notebook to go through the implementation as I have mentioned 
 
 ## Reference and Motivation.
 https://www.analyticsvidhya.com/blog/2019/02/building-crowd-counting-model-python/
