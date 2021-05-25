@@ -16,6 +16,26 @@ The labels/target are the number of person on the frame JPG image and there is o
 
 ![image](https://user-images.githubusercontent.com/49801313/119560850-1515fe00-bdc2-11eb-9b6b-26358b70edca.png)
 
+
+## Final Outcome
+    import matplotlib.pyplot as plt
+    from mpl_toolkits.axes_grid1 import ImageGrid
+
+    fig = plt.figure(figsize=(15,15))
+     grid = ImageGrid(
+        fig, 111,
+        nrows_ncols=(2,2),
+        axes_pad=0.5
+       )
+
+    for x in range(0,4):
+    
+    grid[x].set_title('Number of people => ' + str(labels[x]))
+    grid[x].imshow(img[x])
+    
+   ![image](https://user-images.githubusercontent.com/49801313/119568944-bbb2cc80-bdcb-11eb-8b82-4904566bc2cc.png)
+ 
+
 ## Installation Instructions
 
 #### Make sure you have all the dependencies installed like:-
