@@ -18,8 +18,10 @@ The labels/target are the number of person on the frame JPG image and there is o
 
 ## Installation Instructions
 
-Make sure you have all the dependencies installed like:-
- 1)Tensorflow(Latest version)
+#### Make sure you have all the dependencies installed like:-
+
+    -Tensorflow(Latest version)
+    -pip install tensorflow
  
 After that you can clone the repo and open the notebook to go through the implementation as I have mentioned 
 
