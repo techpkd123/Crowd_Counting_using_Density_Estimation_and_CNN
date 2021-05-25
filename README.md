@@ -20,9 +20,15 @@ The labels/target are the number of person on the frame JPG image and there is o
 
 #### Make sure you have all the dependencies installed like:-
 
-    -Tensorflow(Latest version)
+    Tensorflow(Latest version)
+    
     -pip install tensorflow
- 
+    
+    Then Clone the Repo
+    -git clone https://github.com/techpkd123/Crowd_Counting_using_Density_Estimation_and_CNN.git
+    
+    Then you are good to go and can explore the project(i.e. notebook)
+    
 After that you can clone the repo and open the notebook to go through the implementation as I have mentioned 
 
 ## Reference and Motivation.
